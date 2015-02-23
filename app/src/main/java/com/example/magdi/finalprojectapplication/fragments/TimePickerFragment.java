@@ -44,6 +44,6 @@ public class TimePickerFragment extends TodoListFragment
 
     @Override
     public void onDialogTimeSet(int reference, int hourOfDay, int minute) {
-        text.setText("" + hourOfDay + " " + minute);
+        text.setText("Time: " + hourOfDay + ":" + minute);
     }
 }

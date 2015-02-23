@@ -80,9 +80,7 @@ public class CreateNewFragment extends TodoListFragment  {
                 body.append("\nTime: "+ttv.getText().toString());
                 body.append("\nType: "+eventSpinner.getSelectedItem().toString());
              Toast.makeText(view.getContext(), body.toString(), Toast.LENGTH_LONG ).show();
-                AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
-                builder.setTitle("Add a task");
-                builder.setMessage("What do you want to do?");
+                
 
 
             }

@@ -53,7 +53,7 @@
             android:layout_alignTop="@+id/tvCast"
             android:layout_toRightOf="@+id/tvCast"
             android:layout_toEndOf="@+id/tvCast"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginStart="55dp" />
 
         <Button

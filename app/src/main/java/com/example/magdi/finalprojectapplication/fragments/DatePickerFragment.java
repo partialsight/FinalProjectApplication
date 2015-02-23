@@ -42,6 +42,6 @@ public class DatePickerFragment extends TodoListFragment
 
     @Override
     public void onDialogDateSet(int reference, int year, int monthOfYear, int dayOfMonth) {
-        text.setText( year + " " + monthOfYear + " " + dayOfMonth);
+        text.setText("Date: " + year + "/" + monthOfYear + "/" + dayOfMonth);
     }
 }
