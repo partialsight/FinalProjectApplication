@@ -20,10 +20,9 @@
     <string-array name="task_type">
         <item>Select an Event</item>
         <item>Visit</item>
-        <item>Entertainment</item>
         <item>Call</item>
         <item>Email</item>
-        <item>Special</item>
+        <item>Special Event</item>
         <item>Pay Bill</item>
         <item>Travel</item>
     </string-array>

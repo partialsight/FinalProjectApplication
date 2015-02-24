@@ -80,7 +80,7 @@ public class CreateNewFragment extends TodoListFragment  {
                 body.append("\nTime: "+ttv.getText().toString());
                 body.append("\nType: "+eventSpinner.getSelectedItem().toString());
              Toast.makeText(view.getContext(), body.toString(), Toast.LENGTH_LONG ).show();
-                
+
 
 
             }

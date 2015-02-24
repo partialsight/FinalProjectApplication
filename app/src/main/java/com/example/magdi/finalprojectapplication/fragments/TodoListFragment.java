@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -17,11 +18,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.magdi.finalprojectapplication.R;
+import com.example.magdi.finalprojectapplication.activites.TODOCursorAdapter;
 import com.example.magdi.finalprojectapplication.db.TaskContract;
 import com.example.magdi.finalprojectapplication.db.TaskDBHelper;
 import com.loopj.android.http.JsonHttpResponseHandler;
@@ -36,11 +39,12 @@ public class TodoListFragment extends Fragment {
 
 
     private ImageButton button;
+    private Button delbutton;
     View view;
     private TaskDBHelper helper;
-    SimpleCursorAdapter listAdapter;
+    //SimpleCursorAdapter listAdapter;
     ListView listContent;
-
+    TODOCursorAdapter listAdapter;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,7 +52,7 @@ public class TodoListFragment extends Fragment {
         listContent = (ListView) view.findViewById(R.id.listContent);
 
         updateUI();
-        listContent.setAdapter(listAdapter);
+
 
 
         return view;
@@ -62,17 +66,13 @@ public class TodoListFragment extends Fragment {
         Cursor cursor = sqlDB.query(TaskContract.TABLE,
                 new String[]{TaskContract.Columns._ID, TaskContract.Columns.TASK_Type, TaskContract.Columns.TASK_Date, TaskContract.Columns.TASK_Time, TaskContract.Columns.TASK_Description},
                 null, null, null, null, null);
-
-        listAdapter = new SimpleCursorAdapter(
-                view.getContext(),
+        TODOCursorAdapter listAdapter = new TODOCursorAdapter
+                (view.getContext(),
                 R.layout.task_detail_view,
                 cursor,
                 new String[]{TaskContract.Columns.TASK_Description, TaskContract.Columns.TASK_Type, TaskContract.Columns.TASK_Date, TaskContract.Columns.TASK_Time},
-                new int[]{R.id.tvTitle, R.id.tvCriticsScore, R.id.tvCast, R.id.tvtime},
-
-                0
-        );
-
+                        new int[]{R.id.tvTitle, R.id.tvCriticsScore, R.id.tvCast, R.id.tvtime}       );
+        listContent.setAdapter(listAdapter);
     }
 
 private void makeCall(){
@@ -143,8 +143,8 @@ private void makeCall(){
 
     public void onDoneButtonClick(View view) {
 
-        View v = (View) view.getParent();
-        TextView taskTextView = (TextView) v.findViewById(R.id.tvTitle);
+
+        TextView taskTextView = (TextView) view.findViewById(R.id.tvTitle);
         String task = taskTextView.getText().toString();
 
         String sql = String.format("DELETE FROM %s WHERE %s = '%s'",

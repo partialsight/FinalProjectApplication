@@ -11,7 +11,8 @@
         android:maxHeight="70dp"
         android:scaleType="fitXY"
         android:adjustViewBounds="true"
-        android:src="@drawable/ic_phone" />
+        android:src="@drawable/ic_phone"
+        android:background="@drawable/backgroundstate"/>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_toRightOf="@+id/buttonCall"
@@ -54,9 +55,9 @@
             android:layout_toRightOf="@+id/tvCast"
             android:layout_toEndOf="@+id/tvCast"
             android:layout_marginLeft="10dp"
-            android:layout_marginStart="55dp" />
+            android:layout_marginStart="30dp" />
 
-        <Button
+        <ImageButton
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -64,7 +65,11 @@
             android:id="@+id/button4"
             android:onClick="onDoneButtonClick"
             android:layout_alignTop="@+id/tvTitle"
+            android:layout_alignParentRight="true"
             android:layout_marginLeft="20dp"
-            android:layout_toRightOf="@+id/tvtime" />
+            android:layout_toRightOf="@+id/tvtime"
+            android:src="@drawable/ic_backspace_custom"
+            android:background="@drawable/backgroundstate"/>
+
     </RelativeLayout>
 </RelativeLayout>
