@@ -93,7 +93,7 @@ public class CreateNewFragment extends TodoListFragment  {
 
                 if (parent.getItemAtPosition(pos).toString()
                         .equals("Call")) {
-                    //taskDesrp.addTextChangedListener(new PhoneNumberFormattingTextWatcher());
+                    taskDesrp.addTextChangedListener(new PhoneNumberFormattingTextWatcher());
                     taskDesrp.setInputType(InputType.TYPE_CLASS_PHONE | InputType.TYPE_CLASS_PHONE);
 
 
