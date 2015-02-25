@@ -7,19 +7,15 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.support.v7.internal.widget.AdapterViewCompat;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.Toast;
-import com.example.magdi.finalprojectapplication.db.TaskContract;
-import com.example.magdi.finalprojectapplication.db.TaskDBHelper;
+
 import com.astuetz.PagerSlidingTabStrip;
 import com.example.magdi.finalprojectapplication.R;
 import com.example.magdi.finalprojectapplication.fragments.CreateNewFragment;
-import com.example.magdi.finalprojectapplication.fragments.TimePickerFragment;
+import com.example.magdi.finalprojectapplication.fragments.TodayFragment;
 import com.example.magdi.finalprojectapplication.fragments.TodoListFragment;
 
 
@@ -86,7 +82,7 @@ EditText text1;
         @Override
         public Fragment getItem(int position) {
             if (position == 0) {
-                return new TimePickerFragment();
+                return new TodayFragment();
             } else if (position == 1) {
                 return new TodoListFragment();
             } else if (position == 2) {
