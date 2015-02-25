@@ -30,6 +30,7 @@
         <Button android:text="Create Task"
             android:id="@+id/button"
             style="@style/ButtonText"
+            android:layout_alignParentRight="true"
             android:background="@drawable/btn_lightblue_glossy">
         </Button>
 
