@@ -5,11 +5,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.widget.SimpleCursorAdapter;
 import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
 import android.util.Log;
@@ -18,19 +16,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.magdi.finalprojectapplication.R;
 import com.example.magdi.finalprojectapplication.activites.TODOCursorAdapter;
 import com.example.magdi.finalprojectapplication.db.TaskContract;
 import com.example.magdi.finalprojectapplication.db.TaskDBHelper;
-import com.loopj.android.http.JsonHttpResponseHandler;
-
-import org.apache.http.Header;
-import org.json.JSONArray;
 
 /**
  * Created by magdi on 2/14/15.
@@ -48,7 +40,7 @@ public class TodoListFragment extends Fragment {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        view = inflater.inflate(R.layout.todo_list_fragment, container, false);
+        view = inflater.inflate(R.layout.fragment_todo_list, container, false);
         listContent = (ListView) view.findViewById(R.id.listContent);
 
         updateUI();
