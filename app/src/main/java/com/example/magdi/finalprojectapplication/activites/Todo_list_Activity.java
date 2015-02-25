@@ -19,7 +19,6 @@ import com.example.magdi.finalprojectapplication.db.TaskDBHelper;
 import com.astuetz.PagerSlidingTabStrip;
 import com.example.magdi.finalprojectapplication.R;
 import com.example.magdi.finalprojectapplication.fragments.CreateNewFragment;
-import com.example.magdi.finalprojectapplication.fragments.DatePickerFragment;
 import com.example.magdi.finalprojectapplication.fragments.TimePickerFragment;
 import com.example.magdi.finalprojectapplication.fragments.TodoListFragment;
 
@@ -38,7 +37,6 @@ EditText text1;
         ab.setDisplayShowHomeEnabled(true);
         ab.setIcon(R.drawable.ic_logo2);
 
-
         ViewPager vpPager = (ViewPager)findViewById(R.id.viewpager);
         //set viewpager adapter
         vpPager.setAdapter(new TodoPagerAdapter(getSupportFragmentManager()));
@@ -48,8 +46,6 @@ EditText text1;
         tabStrip.setTextColor(getResources().getColor(R.color.darker_blue));
         tabStrip.notifyDataSetChanged();
         tabStrip.setBackgroundColor(Color.argb(0xFF, 0xFF, 0xFF, 0xFF));
-
-
 
     }
 
