@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp" >
+    <ImageButton
+        android:id="@+id/buttonCall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:maxHeight="70dp"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_phone"
+        android:background="@drawable/backgroundstate"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_toRightOf="@+id/buttonCall"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:textStyle="bold"
+            android:hint="Call"
+            android:textSize="12sp" />
+        <TextView
+            android:id="@+id/tvCriticsScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tvTitle"
+            android:layout_below="@+id/tvTitle"
+            android:hint="Call My Mom"
+            android:textSize="12sp" />
+        <TextView
+            android:id="@+id/tvCast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvCriticsScore"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:hint="May-23-2015 8:00 AM"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/tvtime"
+            android:layout_alignTop="@+id/tvCast"
+            android:layout_toRightOf="@+id/tvCast"
+            android:layout_toEndOf="@+id/tvCast"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="30dp" />
+
+        <ImageButton
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Done"
+            android:id="@+id/button4"
+            android:onClick="onDoneButtonClick"
+            android:layout_alignTop="@+id/tvTitle"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/tvtime"
+            android:src="@drawable/ic_backspace_custom"
+            android:background="@drawable/backgroundstate"/>
+
+    </RelativeLayout>
+</RelativeLayout>
